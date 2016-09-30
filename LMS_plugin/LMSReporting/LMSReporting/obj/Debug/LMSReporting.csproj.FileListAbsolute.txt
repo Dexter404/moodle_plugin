@@ -1,0 +1,7 @@
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\bin\Debug\LMSReporting.exe.config
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\bin\Debug\LMSReporting.exe
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\bin\Debug\LMSReporting.pdb
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\bin\Debug\Thrift.dll
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\obj\Debug\LMSReporting.csprojResolveAssemblyReference.cache
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\obj\Debug\LMSReporting.exe
+D:\Development\Thrift\LMS\LMSReporting\LMSReporting\obj\Debug\LMSReporting.pdb

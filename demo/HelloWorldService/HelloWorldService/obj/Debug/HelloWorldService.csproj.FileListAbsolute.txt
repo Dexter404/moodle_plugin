@@ -1,0 +1,7 @@
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\bin\Debug\HelloWorldService.exe.config
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\obj\Debug\HelloWorldService.csprojResolveAssemblyReference.cache
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\bin\Debug\HelloWorldService.exe
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\bin\Debug\HelloWorldService.pdb
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\bin\Debug\Thrift.dll
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\obj\Debug\HelloWorldService.exe
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldService\obj\Debug\HelloWorldService.pdb

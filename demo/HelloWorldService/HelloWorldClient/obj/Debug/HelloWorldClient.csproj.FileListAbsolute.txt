@@ -1,0 +1,7 @@
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\bin\Debug\HelloWorldClient.exe.config
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\bin\Debug\HelloWorldClient.exe
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\bin\Debug\HelloWorldClient.pdb
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\bin\Debug\Thrift.dll
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\obj\Debug\HelloWorldClient.csprojResolveAssemblyReference.cache
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\obj\Debug\HelloWorldClient.exe
+D:\Development\Thrift\demo\HelloWorldService\HelloWorldClient\obj\Debug\HelloWorldClient.pdb

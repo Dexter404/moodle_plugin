@@ -37,7 +37,7 @@ public class Server {
             };
 
             
-            TServerTransport serverTransport = new TServerSocket(9099);
+            TServerTransport serverTransport = new TServerSocket(9091);
             TThreadPoolServer.Args serverArgs = new TThreadPoolServer.Args(serverTransport);
             serverArgs.processorFactory(processorFactory);
             TServer server = new TThreadPoolServer(serverArgs);

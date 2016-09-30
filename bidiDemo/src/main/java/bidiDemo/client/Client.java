@@ -19,14 +19,16 @@ import org.apache.thrift.transport.TTransport;
  */
 public class Client {
     public static void main(String[] args) throws TException{
-        TTransport transport = new TSocket("localhost", 9099);
+        TTransport transport = new TSocket("localhost", 9091);
         transport.open();
         TProtocol protocol = new TBinaryProtocol(transport);
         MessageService.Client client = new MessageService.Client(protocol);
         client.sendMessage(new Message("B","I exist here."));
         System.out.println("Message sent to server.");
         
-        final MessageClient msgReceiver = new MessageClient(protocol);
+        MessageServiceHandler handler = new MessageServiceHandler();
+        
+        final MessageClient msgReceiver = new MessageClient(protocol, handler);
         new Thread(msgReceiver).start();
     }
 }

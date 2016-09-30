@@ -6,6 +6,7 @@
 package bidiDemo.client;
 
 import bidiDemo.common.MessageService;
+import org.apache.thrift.TException;
 import org.apache.thrift.protocol.TProtocol;
 
 /**
@@ -16,14 +17,21 @@ public class MessageClient implements Runnable{
     private final MessageService.Processor processor;
     private final TProtocol protocol;
     
-    public MessageClient(TProtocol pcl){
+    public MessageClient(TProtocol pcl, MessageServiceHandler messageServiceHandler){
         protocol = pcl;
-        processor = new MessageService.Processor();
+        processor = new MessageService.Processor(messageServiceHandler);
     }
      
     @Override
     public void run() {
-        
+        while (true) {
+        try {
+            System.out.println("Client Processor ran.");
+            while (processor.process(protocol, protocol) == true) { }
+        } catch (TException ex) {
+            ex.printStackTrace();
+        }
+      }
     }
     
 }

@@ -38,7 +38,8 @@ public class MessageServer implements Runnable {
             while (clientItr.hasNext()) {
                 Map.Entry<MessageService.Client,Message> client = clientItr.next();
                 try {
-                    Message msg = new Message("A","Hello " + client.getValue().clientName + "!");
+                    //Message msg = new Message("A","Hello " + client.getValue().clientName + "!");
+                    Message msg = new Message("A","Greetings from server!");
                     client.getKey().sendMessage(msg);
                 } catch (TException te) {
                     clientItr.remove();

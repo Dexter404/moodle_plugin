@@ -29,6 +29,6 @@ public class MessageServiceHandler implements MessageService.Iface{
         System.out.println("-Sent by " + msg.clientName);
         System.out.println("---------------------");
         
-        msgServer.setMessage(client, msg);
+        //msgServer.setMessage(client, msg);
     }
 }

@@ -34,7 +34,7 @@ public class Server {
         System.out.println("Initializing server...");
 
         final MessageDistributorAndHandler mdh = new MessageDistributorAndHandler();
-        new Thread(mdh.new Messenger()).start();
+        //new Thread(mdh.new Messenger()).start();
 
         // Using our own TProcessorFactory gives us an opportunity to get
         // access to the transport right after the client connection is

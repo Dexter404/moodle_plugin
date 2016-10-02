@@ -21,7 +21,8 @@ public class MessageDistributor implements Runnable {
     private final Map<MessageService.Client,Message> clients;
     
     public MessageDistributor(){
-        clients = Collections.synchronizedMap(new HashMap<>());
+        //clients = Collections.synchronizedMap(new HashMap<>());
+        clients = new HashMap<>();
     }
     
     public void addClient(MessageService.Client client){
@@ -44,7 +45,10 @@ public class MessageDistributor implements Runnable {
                             Message msg = new Message("A","Hello " + client.getValue().clientName + "!");
                             //Message msg = new Message("A","Greetings from server!");
                             client.getKey().sendMessage(msg);
+                            System.out.println("Messge sent back to " + client.getValue().clientName + "!");
                         } catch (TException te) {
+                            System.out.println(te.getMessage());
+                            System.out.println("Not able to send back message to " + client.getValue().clientName);
                             System.out.println(te.getStackTrace());
                         }
                         clientItr.remove();

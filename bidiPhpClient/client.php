@@ -1,5 +1,5 @@
 <?php
-namespace MessageService;
+//namespace MessageService;
 
 error_reporting(E_ALL);
 
@@ -43,25 +43,35 @@ use Thrift\Transport\TSocket;
 use Thrift\Transport\TBufferedTransport;
 use Thrift\Exception\TException;
 use bidiDemo\MessageServiceClient;
+use bidiDemo\MessageServiceIf;
 use bidiDemo\Message;
 
+class MessageServiceHandler implements MessageServiceIf{
+    public function sendMessage(Message $msg){
+        echo "---------------------<br/>";
+        echo "Got message from " . $msg->clientName . "<br/>";
+        echo $msg->message . "<br/>";
+        echo "---------------------<br/>";
+    }    
+}
+
 try {
-    $socket = new TSocket('localhost', 9091);
+    $socket = new TSocket('localhost', 9095);
     //$socket->setSendTimeout(2000);
     $transport = new TBufferedTransport($socket, 1024, 1024);
     $protocol = new TBinaryProtocol($transport);
     $client = new MessageServiceClient($protocol);
     $transport->open();
     
-    $msgListener = new MessageListener();
-    $msgListener->start();
-    
     $msg = new Message(array('clientName'=>"D",'message'=>"Hello I am php client."));
     echo "Client Name: ".$msg->clientName."<br>Message: ".$msg->message;
     $client->sendMessage($msg);
     echo "<br>Message sent!";
+
+    $msgListener = new MessageListener($protocol, new MessageServiceHandler());
+    $msgListener->start();
     
-    $transport->close();  
+    //$transport->close();  
 } catch (TException $tx) {
     print 'TException: '.$tx->getMessage()."\n";
 }
